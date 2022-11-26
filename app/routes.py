@@ -22,7 +22,6 @@ def canalization():
 
 @app.route('/rd008', methods=['GET', 'POST'])
 def canal():
-    print('test')
     if request.method == 'POST':
         if ('photo' not in request.json or 'latitude' not in request.json or
                 'longitude' not in request.json):
