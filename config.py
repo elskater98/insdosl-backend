@@ -10,3 +10,6 @@ class Config(object):
     SQLALCHEMY_ENGINE_OPTIONS = {
         "pool_recycle": 3600,
     }
+
+    TELEGRAM_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+    TELEGRAM_NOTIFICATION_USERS = '1346477'

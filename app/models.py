@@ -38,3 +38,4 @@ class Rd008(db.Model):
     geom = db.Column(Geometry())
     description = db.Column(db.String)
     photo = db.Column(db.String)
+    type = db.Column(db.String)
