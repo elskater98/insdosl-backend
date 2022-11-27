@@ -67,10 +67,11 @@ def canal():
             return jsonify({'success': 1})
     return jsonify([
             {
+                'id': c.id,
                 'photo': c.photo,
                 'geom': json.loads(c.geom),
                 'description': c.description,
                 'type': c.type,
             } for c in db.session.query(Rd008.photo, Rd008.description,
-                Rd008.type,
+                Rd008.type, Rd008.Id,
                 ST_AsGeoJSON(ST_FlipCoordinates(Rd008.geom)).label('geom'))])
