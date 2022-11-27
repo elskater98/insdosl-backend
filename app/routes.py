@@ -73,5 +73,5 @@ def canal():
                 'description': c.description,
                 'type': c.type,
             } for c in db.session.query(Rd008.photo, Rd008.description,
-                Rd008.type, Rd008.Id,
+                Rd008.type, Rd008.id,
                 ST_AsGeoJSON(ST_FlipCoordinates(Rd008.geom)).label('geom'))])
